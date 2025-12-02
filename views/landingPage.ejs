@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigura Kost - Kost Nyaman dengan Sentuhan Vintage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleLP.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <i class="fas fa-home"></i>
+                    <span>Sigura Kost</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Beranda</a>
+                    <a href="#features">Fitur</a>
+                    <a href="#about">Tentang</a>
+                </div>
+                
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Selamat Datang di Sigura Kost</h1>
+                <p>Kost nyaman dengan sentuhan vintage yang hangat. Rasakan pengalaman tinggal yang berbeda dengan sistem manajemen kost modern yang mudah digunakan.</p>
+                <div class="hero-buttons">
+                    <a href="/kost" class="btn btn-primary">Check In</a>
+                    <a href="#features" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fitur Unggulan</h2>
+                <p>Nikmati kemudahan mengelola kost dengan fitur-fitur canggih yang dirancang khusus untuk kenyamanan Anda</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Status Kamar Real-time</h3>
+                    <p>Pantau ketersediaan kamar secara real-time, termasuk status kosong, terisi, atau dalam proses booking dengan tampilan yang elegan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Dashboard Analytics</h3>
+                    <p>Kelola keuangan dan statistik hunian dengan dashboard yang mudah dipahami dan informatif dengan sentuhan klasik.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Akses Mobile</h3>
+                    <p>Kelola kost kapan saja dan di mana saja dengan aplikasi yang responsif di semua perangkat dengan tampilan yang timeless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Sigura Kost</h2>
+                    <p>Sigura Kost adalah solusi modern untuk manajemen kost yang dirancang khusus dengan sentuhan vintage yang hangat dan nyaman.</p>
+                    <p>Dengan sistem yang sederhana namun powerful, Anda dapat memantau status kamar secara real-time, mengelola pembayaran, dan memberikan pengalaman terbaik bagi penghuni kost dengan estetika yang timeless.</p>
+                    <p>Platform kami telah digunakan oleh ratusan pemilik kost di seluruh Indonesia dengan tingkat kepuasan yang tinggi dan sentuhan personal yang hangat.</p>
+                    <a href="/auth/login" class="btn btn-primary" style="margin-top: 20px;">Coba Sekarang</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Interior Kost Sigura">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sigura Kost</h3>
+                    <p>Solusi modern dengan sentuhan vintage untuk manajemen kost yang nyaman, aman, dan mudah dikelola.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Jl. Semanggi Raya, Kota Malang</span></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/6282335640458">+62 823 3564 0458</a></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@sigurakost.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Sigura Kost UUK 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--vintage-brown)';
+                navLinks.style.padding = '20px';
+                navLinks.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

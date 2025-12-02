@@ -1,0 +1,90 @@
+<header class="navbar">
+    <style>
+        /* Navbar Vintage */
+.navbar {
+    background: #6d4c41; /* Coklat tua vintage */
+    padding: 14px 40px;
+    border-bottom: 4px solid #8d6e63;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff8e7;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff8e7;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 8px;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ffe0b2;
+    border-bottom: 2px solid #ffe0b2;
+}
+
+.logout-btn {
+    background: #a0522d;
+    color: #fff;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.logout-btn:hover {
+    background: #7d3b22;
+}
+
+    </style>
+    <div class="header-container">
+        
+        <div class="logo">
+            <span class="logo-icon">🏨</span>
+            <span>Sigura Kost</span>
+        </div>
+
+        <nav class="nav-links">
+            <% if (!user) { %>
+                <a href="/">Beranda</a>
+                <a href="#kamar" class="active">List Kost</a>
+            <% } else { %>
+                <a href="/kost/tambah">Tambah Kamar</a>
+            <% } %>
+        </nav>
+
+        <% if (user) { %>
+        <div class="right-actions">
+            <form action="/auth/logout" method="GET">
+                <button class="logout-btn">Log Out</button>
+            </form>
+        </div>
+        <% } %>
+
+    </div>
+</header>

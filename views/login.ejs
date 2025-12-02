@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sigura Kost</title>
+    <link rel="stylesheet" href="/css/styleLogin.css">
+</head>
+<body>
+
+    <!-- Dekorasi Vintage -->
+    <div class="vintage-decoration decoration-1"></div>
+    <div class="vintage-decoration decoration-2"></div>
+    <div class="vintage-decoration decoration-3"></div>
+    <div class="vintage-decoration decoration-4"></div>
+
+    <div class="register-wrap">
+        <form action="/auth/login" method="post" class="register-form">
+            <h2>Login Sigura Kost</h2>
+
+            <div id="error-container"></div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
+                <button type="button" class="password-toggle" id="togglePassword">👁</button>
+            </div>
+
+            <button type="submit" class="btn">
+                <span>Login</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="register-footer">
+                <p>Belum punya akun? <a href="/auth/register">Daftar di sini</a></p>
+                <a href="/">Kembali ke menu beranda</a>
+            </div>
+        </form>
+    </div>
+
+<script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.innerText = "🙈";
+        } else {
+            passwordInput.type = "password";
+            togglePassword.innerText = "👁";
+        }
+    });
+</script>
+
+</body>
+</html>

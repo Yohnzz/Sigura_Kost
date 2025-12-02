@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "69232be1213162df3f03db0d"
+  },
+  "admin_id": {
+    "$oid": "692321ee1db9b2a9f60e8ead"
+  },
+  "nama": "K001",
+  "foto": "1763912673636-1.png",
+  "deskripsi": "Kamar Standart menawarkan hunian yang fungsional dan ekonomis bagi mahasiswa maupun pekerja. Fasilitas meliputi tempat tidur single, meja belajar, kursi, dan lemari kecil. Interior sederhana namun bersih, memberikan kenyamanan untuk istirahat dan aktivitas belajar. Ideal untuk penghuni yang mencari kamar murah namun tetap nyaman dan aman.",
+  "alamat": "Blok A No. 12, Jl. Semanggi Raya, Malang",
+  "telepon": "6282335640458",
+  "tipeKamar": "standard",
+  "luasKamar": 11,
+  "kapasitas": 1,
+  "harga": 700000,
+  "status": "kosong",
+  "createdAt": {
+    "$date": "2025-11-23T15:44:33.709Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T12:59:25.483Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69232ced213162df3f03db17"
+  },
+  "admin_id": {
+    "$oid": "692321ee1db9b2a9f60e8ead"
+  },
+  "nama": "K002",
+  "foto": "1763912941035-2.png",
+  "deskripsi": "Kamar Deluxe menawarkan ruang yang lebih lega serta fasilitas tambahan seperti kasur yang lebih besar, meja kerja ergonomis, lemari besar, dan AC. Cocok bagi penghuni yang menginginkan hunian dengan kenyamanan lebih dan tampilan modern.",
+  "alamat": "Blok B No. 08, Jl. Semanggi Raya, Malang",
+  "telepon": "6282335640458",
+  "tipeKamar": "deluxe",
+  "luasKamar": 17,
+  "kapasitas": 2,
+  "harga": 750000,
+  "status": "kosong",
+  "createdAt": {
+    "$date": "2025-11-23T15:49:01.600Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-25T01:14:19.213Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69232dea213162df3f03db37"
+  },
+  "admin_id": {
+    "$oid": "692321ee1db9b2a9f60e8ead"
+  },
+  "nama": "K003",
+  "foto": "1763913194300-3.png",
+  "deskripsi": "Kamar Executive menghadirkan pengalaman tinggal paling premium dengan ruang sangat luas, kasur hotel-quality, area kerja eksklusif, lemari built-in, jendela besar, dan kamar mandi dalam modern. Desain elegan dan rasa privasi tinggi membuatnya setara hunian hotel.",
+  "alamat": "Blok C No. 02, Jl. Semanggi Raya, Malang",
+  "telepon": "6282335640458",
+  "tipeKamar": "executive",
+  "luasKamar": 26,
+  "kapasitas": 2,
+  "harga": 1200000,
+  "status": "kosong",
+  "createdAt": {
+    "$date": "2025-11-23T15:53:14.863Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-25T01:14:05.953Z"
+  },
+  "__v": 0
+}]

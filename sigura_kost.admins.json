@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "692321ee1db9b2a9f60e8ead"
+  },
+  "nama": "kiww",
+  "username": "Yohnzz",
+  "password": "$2b$10$Jfyx8eyX31AMeFQ6EGufieRQQ9LiaM7aTgHsx58LkhkKosuiBBbN2",
+  "createdAt": {
+    "$date": "2025-11-23T15:02:06.694Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-23T15:02:06.694Z"
+  },
+  "__v": 0
+}]

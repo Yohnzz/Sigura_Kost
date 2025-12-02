@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kamar Kost - Sigura Kost</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleTambah.css">
+</head>
+<body>
+    <!-- Vintage decorative elements -->
+    <div class="vintage-decoration decoration-1"></div>
+    <div class="vintage-decoration decoration-2"></div>
+
+    <!-- Form Container -->
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2><i class="fas fa-plus-circle"></i> Form Tambah Kamar Kost Baru</h2>
+            </div>
+            
+            <form action="/kost/add" method="POST" class="form-content" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="namaKamar" class="required">Nama Kamar</label>
+                        <input type="text" id="namaKamar" name="namaKamar" class="form-control" placeholder="Contoh: Kamar 101, Kamar A-1" required>
+                        <div class="form-help">Berikan nama yang mudah diingat untuk kamar ini</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="harga" class="required">Harga Sewa (per bulan)</label>
+                        <input type="number" id="harga" name="harga" class="form-control" placeholder="Contoh: 1500000" min="0" required>
+                        <div class="form-help">Masukkan harga dalam Rupiah tanpa titik atau koma</div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="status" class="required">Status Kamar</label>
+                        <select id="status" name="status" class="form-control" required>
+                            <option value="kosong">Kosong</option>
+                            <option value="terisi">Terisi</option>
+                            <option value="booking">Booking</option>
+                        </select>
+                        <div class="form-help">Status akan menentukan apakah kamar bisa dipesan</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tipeKamar">Tipe Kamar</label>
+                        <select id="tipeKamar" name="tipeKamar" class="form-control">
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Executive">Executive</option>
+                            <option value="Family">Family</option>
+                        </select>
+                        <div class="form-help">Pilih kategori kamar berdasarkan fasilitas</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deskripsi" class="required">Deskripsi Kamar</label>
+                    <textarea id="deskripsi" name="deskripsi" class="form-control" placeholder="Jelaskan fasilitas, ukuran, dan keunggulan kamar ini..." required></textarea>
+                    <div class="form-help">Deskripsi yang jelas akan menarik lebih banyak calon penghuni</div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="luasKamar">Luas Kamar (m²)</label>
+                        <input type="number" id="luasKamar" name="luasKamar" class="form-control" placeholder="Contoh: 12" min="0" step="0.1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kapasitas">Kapasitas Penghuni</label>
+                        <input type="number" id="kapasitas" name="kapasitas" class="form-control" placeholder="Contoh: 2" min="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="teleponPemilik">Telepon Pemilik</label>
+                        <input type="tel" id="teleponPemilik" name="teleponPemilik" class="form-control" placeholder="Contoh: 081234567890">
+                        <div class="form-help">Nomor telepon pemilik kost</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="alamatKost">Alamat Kost</label>
+                        <input type="text" id="alamatKost" name="alamatKost" class="form-control" placeholder="Contoh: Jl. Merdeka No. 123">
+                        <div class="form-help">Alamat lengkap lokasi kost</div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="foto" class="form-label required">Upload Foto Utama Kamar</label>
+                    <input type="file" class="form-control" id="foto" name="foto" required>
+                    <div class="form-help">Pilih foto utama yang menarik untuk kamar ini</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="fotosGaleri" class="form-label">Upload Foto Galeri Kamar (Opsional)</label>
+                    <input type="file" class="form-control" id="fotosGaleri" name="fotosGaleri" multiple>
+                    <div class="form-help">Anda bisa upload hingga 10 foto tambahan. Gunakan Ctrl+Click untuk memilih multiple file.</div>
+                </div>
+                
+                <div class="form-actions">
+                    <a href="/kost" class="btn btn-cancel">Batal</a>
+                    <button type="submit" class="btn btn-primary">Tambah Kamar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Format harga input secara otomatis
+
+        // Validasi form sebelum submit
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const namaKamar = document.getElementById('namaKamar').value;
+            const harga = document.getElementById('harga').value;
+            const deskripsi = document.getElementById('deskripsi').value;
+            const foto = document.getElementById('foto').files[0];
+            
+            let errors = [];
+            
+            if (!namaKamar.trim()) {
+                errors.push('Nama kamar harus diisi');
+            }
+            
+            if (!harga || parseFloat(harga.replace(/\D/g, '')) <= 0) {
+                errors.push('Harga sewa harus diisi dengan nilai yang valid');
+            }
+            
+            if (!deskripsi.trim()) {
+                errors.push('Deskripsi kamar harus diisi');
+            }
+            
+            if (!foto) {
+                errors.push('Foto utama kamar harus diupload');
+            }
+            
+            if (errors.length > 0) {
+                e.preventDefault();
+                alert('Terjadi kesalahan:\n\n' + errors.join('\n'));
+            }
+        });
+
+        // Preview untuk file upload (opsional, bisa dikembangkan lebih lanjut)
+        document.getElementById('foto').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const fileSize = (file.size / 1024 / 1024).toFixed(2); // MB
+                if (fileSize > 5) {
+                    alert('Ukuran file terlalu besar. Maksimal 5MB.');
+                    e.target.value = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
